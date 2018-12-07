@@ -1,0 +1,94 @@
+/* You can add global styles to this file, and also import other style files */
+.required{
+    border: 1px solid red;
+}
+
+.title{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+}
+.mutual-background-color{
+        background-color: #5599C6;
+}
+
+.required-warning{
+    border: 1px solid red;
+}
+
+
+html, body { 
+    height: 100%;
+    /*Khai báo biến trong css để sử dụng chung*/
+    --background: #ffffff !important;
+    --font-size-title: 16px;
+    --hover-btn-color:#f9af5a !important;
+    --background-color-custome: #e9e8e8;
+    --mutual-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --mutual-blue-color: #5599C6 !important ;
+    --background-color-form:#cccccc !important;
+    --background-color-form-body:rgb(151, 195, 224) !important;
+}
+
+
+/*****************************CSS cho các nút thêm sửa xóa tại bảng thông tin nhân viên******************************/
+.profile-nav-btn{
+    font-family: var(--mutual-font);
+    font-size: var(--font-size-title);
+    color: white;
+    background-color: var(--mutual-blue-color);
+    user-select: none;
+}
+.btn-func{
+    width: auto;
+    margin-left: 8px;
+    cursor: pointer;
+    padding-top: 4px;
+    height: 23px;
+}
+.btn-func:hover{
+    background-color: var(--hover-btn-color);
+}
+
+
+/******************************************************************************/
+
+.form-title{
+    border: 1px solid #cccccc;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.btn-form{
+    width: 75px !important;
+    height: 30px !important;
+    border-radius: 2px !important;
+    border: var(--border) !important;
+    background-color: #3f69da !important;
+    line-height: 30px !important;
+    font-size: 18px !important;
+    font-weight: bold !important;
+    text-align: center !important;
+    color: white !important;
+    margin: 8px !important;
+    cursor: pointer !important;
+    user-select: none !important;
+}
+.btn-form:hover{
+    background-color: var(--hover-btn-color) !important;
+}
+
+.overlay{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1000;
+}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* @import "~@angular/material/prebuilt-themes/indigo-pink.css"; */

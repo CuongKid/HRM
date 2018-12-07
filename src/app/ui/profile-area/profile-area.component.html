@@ -1,0 +1,187 @@
+<!--Khu vực chung cho tất cả các trang của admin và quản lí-->
+<div class="profile-container">
+  <div class="left-side">
+    <div class="left-side-option">Vị trí công việc</div>
+    <div class="left-side-option">Chức danh</div>
+    <div class="left-side-option">Mức lương</div>
+  </div>
+  <div class="right-side">
+    <div class="profile-body">
+      <div class="profile-nav-btn">
+
+        <div class="btn-func fa fa-plus" (click)="openFormAdd()"> Thêm</div>
+        <div class="btn-func fa fa-edit"> Sửa</div>
+        <div class="btn-func fa fa-remove"> Xóa</div>
+        <div class="btn-func fa fa-refresh"> Nạp</div>
+
+      </div>
+      <div class="div-contain-table">
+        <!-- <table class="profile-table table-hover table-striped"> -->
+        <table class="profile-table">
+          <tbody>
+            <thead>
+
+              <tr class="table-title">
+                <th class="employee-code-title">Mã nhân viên
+                  <input type="text">
+                </th>
+
+                <th class="employee-name-title">Họ tên
+                  <input type="text">
+                </th>
+                <th class="employee-sexual-title">Giới tính
+                  <input type="text">
+                </th>
+                <th>Ngày sinh
+                  <input type="text">
+                </th>
+                <th>Dân tộc
+                  <input type="text">
+                </th>
+                <th class="employee-position-title">Vị trí công việc
+                  <input type="text">
+                </th>
+                <th>Chức danh
+                  <input type="text">
+                </th>
+                <th>Mức lương
+                  <input type="text">
+                </th>
+              </tr>
+            </thead>
+
+            <ng-container *ngIf="listEmployee && listEmployee.length > 0; else No_Data">
+              <tr *ngFor="let employee of listEmployee" class="profile-detail" [class.activeRow]="employee.EmployeeID===activeID"
+                (click)="clickedRow(employee.EmployeeID)">
+                <td class="employee-code"> {{employee.EmployeeCode}}</td>
+                <td class="employee-name"> {{employee.EmployeeFullName}}</td>
+                <td class="employee-sexual"> {{employee.EmployeeSexual}}</td>
+                <td class="employee-birthday"> {{employee.EmployeeBirthday}}</td>
+                <td class="employee-ethnic"> {{employee.Ethnic}}</td>
+                <td class="employee-position"> {{employee.EducationalBackgroundID}}</td>
+                <td class="employee-title"> {{employee.PositionID}}</td>
+                <td class="employee-salary"> {{employee.PositionID}}</td>
+              </tr>
+
+              <ng-template #No_Data>
+                <span> Không có dữ liệu để hiển thị</span>
+              </ng-template>
+            </ng-container>
+
+          </tbody>
+        </table>
+      </div>
+
+
+      <div class="nav-paging">
+        <div class="btn-paging fa fa-angle-double-left fa-2x"></div>
+        <div class="btn-paging fa fa-angle-left fa-2x"></div>
+        <div class="page-number">
+          <input type="text" class="go-to-any-page">
+          <span> / </span>
+        </div>
+        <div class="btn-paging fa fa-angle-right fa-2x"></div>
+        <div class="btn-paging fa fa-angle-double-right fa-2x"></div>
+        <div class="total-record">Hiển thị /</div>
+      </div>
+    </div>
+    <div class="profile-footer">
+      <div class="row">
+        <div class="col-md-3">
+          <div class=""></div>
+        </div>
+        <div class="col-md-3"></div>
+        <div class="col-md-3"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div *ngIf="isDisplay" class="dialog-element">
+  <div class="dialog-container">
+    <div class="dialog-header form-title">Thêm nhân viên
+      <span class="fa fa-close close-btn" (click)="closeFormAdd()"></span>
+    </div>
+    <div class="dialog-body">
+
+      <div class=" input-row">
+        <span class="input-title ">Mã nhân viên</span>
+        <input class="main-input" type="text">
+      </div>
+
+      <div class=" input-row">
+        <span class="input-title">Họ tên nhân viên</span>
+        <input class="main-input custome-input-3" type="text">
+      </div>
+
+      <div class="custome-row-1">
+        <div class=" input-row">
+          <span class="input-title custome-width-1">Ngày sinh</span>
+          <input class="main-input custome-input-1" type="date">
+        </div>
+
+        <div class=" input-row">
+          <span class="input-title custome-width-2">Giới tính</span>
+          <input class="main-input custome-input-2" type="text">
+        </div>
+      </div>
+
+      <div class="custome-row-1">
+        <div class=" input-row">
+          <span class="input-title custome-width-1" title="Số điện thoại">SĐT</span>
+          <input class="main-input custome-input-1" type="text">
+        </div>
+
+        <div class=" input-row">
+          <span class="input-title custome-width-3" title="Chứng minh thư">CMT</span>
+          <input class="main-input custome-input-1" type="text">
+        </div>
+      </div>
+
+      <div class=" input-row">
+        <span class="input-title">Nơi sinh</span>
+        <input class="main-input custome-input-3" type="text">
+      </div>
+
+      <div class=" input-row">
+        <span class="input-title">Nơi ở hiện tại</span>
+        <input class="main-input custome-input-3" type="text">
+      </div>
+
+      <div class=" input-row">
+        <span class="input-title" title="Chứng minh thư">Dân tộc</span>
+        <input class="main-input custome-input-1" type="text">
+      </div>
+
+      <div class=" input-row">
+        <span class="input-title">Nơi đào tạo</span>
+        <input class="main-input custome-input-3" type="text">
+      </div>
+
+      <div class=" input-row">
+        <span class="input-title">Chức danh</span>
+        <input class="main-input custome-input-3" type="text">
+      </div>
+
+      <div class=" input-row">
+        <span class="input-title">Vị trí công việc</span>
+        <input class="main-input custome-input-3" type="text">
+      </div>
+      <div class=" input-row">
+        <span class="input-title">Email</span>
+        <input class="main-input custome-input-3" type="text">
+      </div>
+      <div class=" input-row">
+        <span class="input-title">Giải thưởng</span>
+        <input class="main-input custome-input-3" type="text">
+      </div>
+    </div>
+    <div class="dialog-footer">
+      <div class="fa fa-save confirm-save-btn btn-form" (click)="saveEmployee()">Cất</div>
+    </div>
+  </div>
+
+</div>
+
+<div *ngIf="isDisplay" class="overlay"></div>

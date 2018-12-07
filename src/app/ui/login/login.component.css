@@ -1,0 +1,166 @@
+.login-container{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-width: 40%;
+}
+.login-header{
+    width: 100%;
+    height: 100px;
+    /*background-image: linear-gradient(blue, green);   */
+    background-color: #5599C6;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+}
+.login-logo{
+    background-image: url('/../../assets/image/login/logo.svg');
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 200px;
+    background-size: 100px 100px;
+}
+.login-title{
+    float: right;
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 300px;
+}
+.title-content{
+    color: white;
+    position: absolute;
+    top: 40%;
+    font-size: 30px;
+    right: 16px;
+}
+.login-body{
+    width: 100%;
+    height: 70%;
+    background-image: url('/../../assets/image/login/login_body.jpg');
+    /* background-image: url('/../../assets/image/login/background.png'); */
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.login-footer{
+    width: 100%;
+    height: calc(100% - 78%);
+    background-color: #5599C6;
+}
+.footer-company{
+height: 100%;
+width: 100%;
+min-width: 80%;
+}
+.details-title{
+    width: 40%;
+    height: 100%;
+    display: block;
+    float: center;
+    position: relative;
+    left: 40%;
+}
+.details-title div{
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+    margin-top: 2px;
+}
+
+.login-form{
+    height: 200px;
+    width: 400px;
+    background-color: #5599C6;
+    position: fixed;
+    top: 30%;
+    left: 10%;
+    border-radius: 4px;
+}
+
+.login-form-header{
+    margin-top: 4px;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    height: 20px;
+    width: 100%;
+    font-weight: bold;
+}
+.login-form-body{
+    height: 70%;
+    width: 100%;
+    }
+.input-info{
+    width: 100%;
+    height: 40%;
+    margin-top: 8px;
+    color: white;
+    font-size: 16px;
+}
+.input-info input
+{
+    color: black;
+    height: 30px;
+    width: 250px;
+    float: right;
+    margin-right: 16px;
+    outline: none;
+    font-size: 14px; 
+}
+.input-info span{
+    font-weight: bold;
+    padding-top: 16px;
+    padding-left: 16px;
+}
+
+.login-form-button{
+    width: 100%;
+    height: 40px;
+}
+.login-btn{
+    width: 100px;
+    height: 30px;
+    background-color: white;
+    color: #5599C6;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 4px;
+    margin-right: 16px;
+    float: right;
+    cursor: pointer;
+    user-select: none;
+}
+
+.login-btn:hover
+{
+    background-color: #f9af5a;
+}
+/*css cho thiet bi di dong*/
+@media only screen and (max-width: 480px){
+  .details-title div {
+   font-size: 12px;
+    color: white;
+  }
+  .details-title{
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+    left: 0;
+ }
+ .login-form{
+    height: 200px;
+    width: 100%;
+    background-color: #5599C6;
+    position: fixed;
+    top: 30%;
+    border-radius: 4px;
+    left: 0;
+}
+}

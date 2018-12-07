@@ -1,0 +1,265 @@
+body *{
+    --border: 1px solid #cccccc;
+    --background-form:
+}
+.profile-container{
+    position: absolute;
+    top: 100px;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: calc(100% - 100px);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+.left-side{
+    position: relative;
+    width: 250px;
+    height: 100%;
+    border-right: 1px solid #cccccc;
+    background-color: var(--background);
+    min-width: 200px;
+}
+.left-side-option{
+    font-size: var(--font-size-title);
+    color: black;
+    text-align: left;
+    padding-left: 8px;
+    padding-top: 8px;
+    width: auto;
+    margin-top: 8px;
+    line-height: 18px;
+    height: 25px;
+}
+
+.left-side-option:hover{
+    /*text-decoration: underline;*/
+    cursor: pointer;
+    background-color: var(--hover-btn-color);
+}
+
+.right-side{
+    width: calc(100% - 250px);
+    height: 100%;
+    background-color: var(--background-color-custome);
+    /*min-width: 800px;*/
+}
+.profile-body{
+width: 98%;
+height: 78%;
+background-color: var(--background);
+margin: 6px;
+}
+.profile-footer{
+width: 98%;
+height: 18%;
+background-color: var(--background);
+margin: 6px;
+}
+
+.profile-nav-btn{
+    width: 100%;
+    height: 25px;
+    display: flex;
+}
+.div-contain-table{
+    height: 86%;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border-bottom: 1px solid #cccccc;
+}
+
+.profile-table{
+    width: 100%;
+    margin-left: 8px;
+    height: 100%;
+
+}
+.profile-table tbody{
+    display: block;
+    overflow: auto;
+}
+
+.profile-table tr, th, td{
+    border-left: 1px solid #cccccc;
+    /*border-top: 1px solid #cccccc;*/
+    border-bottom: 1px solid #cccccc;
+}
+
+.profile-table th{
+        border-top: 1px solid #cccccc;
+
+}
+.profile-table tr{
+    height: 25px;
+}
+
+.table-title{
+    height: 40px;
+    font-size: 14px;
+}
+
+.table-title input{
+    width: 100%;
+    outline: none;
+    font-weight: normal;
+    padding-left: 4px;
+}
+.employee-position-title{
+    width: 20%;
+}
+.employee-name-title{
+    width: 20%;
+}
+
+.employee-sexual-title{
+    width: 10%;
+}
+
+.employee-code-title{
+width: 10%;
+}
+
+.profile-detail td{
+    text-align: left;
+    padding-left: 4px;
+}
+
+.activeRow{
+    background-color: var(--hover-btn-color);  
+}
+
+/*********************************css cho các nút chuyển trang***********************************/
+
+.nav-paging{
+    height: 8%;
+    width: 100%;
+    display: flex;
+}
+
+.btn-paging{
+    width: 20px;
+    height: 20px;   
+    margin-left: 4px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.btn-paging:hover{
+     opacity: 1;
+}
+
+.page-number{
+    width: 85px;
+}
+
+.go-to-any-page{
+    width:40px;
+    height: 20px;   
+    margin: 5px 4px 4px 4px;
+    padding: 4px;
+    outline: none; 
+}
+
+.total-record{
+    position: absolute;
+    width: 150px;
+    right: 0;
+    margin-top: 4px;
+}
+
+/***********************CSS cho form thêm, sửa nhân viên*******************************************/
+
+.dialog-element{
+    z-index: 2000;
+    height: 500px;
+    width: 450px;
+    min-width: 400px;
+    right: 30%;
+    top: 20%;
+    position: fixed;
+    border: var(--border);
+    background-color: var(--background-color-form);
+    border-radius: 2px;
+}
+
+.dialog-container{
+    height: 97%;
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 8px;
+    background-color: var(--background-color-form-body);
+    border: var(--border);
+}
+
+.dialog-header{
+    height: 25px;
+    line-height: 25px;
+}
+.close-btn{
+    float: right;
+    padding-right: 4px;
+}
+.dialog-body{
+    width: 100%;
+    margin: 0 auto;
+    height: 85%;
+    background-color: var(--background);
+}
+.dialog-footer{
+    height: 40px;
+    width: 100%;
+}
+
+.confirm-save-btn{
+    float: right;
+}
+
+.input-row{
+    margin-top: 4px;
+    display: flex;
+    height: 30px;
+    padding-top: 4px;
+    margin-left: 8px;
+}
+.input-title{
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    margin-right: 16px;
+    line-height: 25px;
+    height: 25px;
+    width: 140px;
+}
+
+.main-input{
+    outline: none;
+}
+.custome-row-1{
+    display: flex;
+}
+
+.custome-width-1{
+    width: 80px;
+}
+
+.custome-width-2{
+    width: 70px;
+}
+.custome-width-3{
+    width: 50px;
+}
+
+.custome-input-1{
+    width: 120px;
+}
+
+.custome-input-2{
+    width: 100px;
+}
+.custome-input-3{
+    width: 254px;
+}
+/******************************************************************/
+

@@ -1,0 +1,33 @@
+<div class="mutual-header">
+  <div class="mutual-user-info mutual-background-color">
+    <div class="mutual-row-1">
+      <div class="mutual-logo"></div>
+      <span class="mutual-title title">QUẢN LÍ NHÂN SỰ</span>
+    </div>
+  </div>
+  <div class="mutual-nav-bar">
+    <div class="nav-btn btn-profile" (click)="activeClass(1)" [class.active]="active===1">Hồ
+      sơ</div>
+    <div class="nav-btn btn-position" [class.active]="active===2" (mouseover)="isDisplay=true">Vị trí công việc
+      <div *ngIf="isDisplay" (mouseout)="isDisplay=false" class="children-component">
+        <div (click)="activeClass(2)">Vị trí công việc</div>
+        <div (click)="activeClass(3)">Phòng ban</div>
+      </div>
+    </div>
+
+    <div class="nav-btn btn-title" (click)="activeClass(4)" [class.active]="active===4">Chức
+      danh</div>
+    <div class="nav-btn btn-salary" (click)="activeClass(5)" [class.active]="active===5">Mức
+      lương</div>
+    <div class="nav-btn btn-education" (click)="activeClass(6)" [class.active]="active===6">Học
+      vấn</div>
+    <div class="nav-btn btn-role-editor" (click)="activeClass(7)" [class.active]="active===7">Phân quyền</div>
+  </div>
+</div>
+
+<app-profile-area *ngIf="active===1"></app-profile-area>
+<app-work-position-area *ngIf="active===2"></app-work-position-area>
+<app-institute-area *ngIf="active===3"></app-institute-area>
+<app-title-area *ngIf="active===4"></app-title-area>
+<app-salary-area *ngIf="active===5"></app-salary-area>
+<app-education-background-area *ngIf="active===6"></app-education-background-area>

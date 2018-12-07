@@ -1,0 +1,35 @@
+<div class="login-container">
+  <div class="login-header">
+    <div class="login-logo"></div>
+    <div class="login-title"><span class="title-content">QUẢN LÍ NHÂN SỰ</span></div>
+  </div>
+  <div class="login-body"></div>
+  <div class="login-footer">
+    <div class="footer-company">
+      <div class="details-title">
+        <div> Doanh nghiệp: Đại học Bách Khoa Hà Nội</div>
+        <div> Địa chỉ: số 1 Đại Cồ Việt, Hai Bà Trưng, Hà Nội</div>
+        <div> Số điện thoại: 0336377297</div>
+        <div> Website: hust.edu.vn</div>
+      </div>
+    </div>
+  </div>
+  <!--region login form-->
+  <div class="login-form">
+    <div class="login-form-header">LOGIN</div>
+    <div class="login-form-body">
+      <div class="username input-info">
+        <span> USERNAME</span>
+        <input class="input-username" [class.required-warning]="isRequiredUsername" (blur)="confirmLogin()" [(ngModel)]="user.username"
+          type="text">
+      </div>
+      <div class="password input-info">
+        <span> PASSWORD</span>
+        <input type="password" [class.required-warning]="isRequiredPassword" (blur)="confirmLogin()" [(ngModel)]="user.password">
+      </div>
+      <div class="login-form-button">
+        <div class="login-btn" (click)="confirmLogin()">LOGIN</div>
+      </div>
+    </div>
+    <!--end region login form-->
+  </div>
